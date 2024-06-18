@@ -1,21 +1,24 @@
 .experience {
     margin-top: 32px;
     margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     border-top: 1px solid rgba(255, 255, 255, 0.15);
-    img {
-        width: 100%;
-        border-radius: 16px;
-        margin-top: 32px;
+    padding-top: 32px;
+    .left {
+        width: 512px;
+    }
+
+    .right {
+        width: 360px;
+        img {
+            width: 360px;
+        }
     }
 }
 
 .currently-work {
-    margin-top: 32px;
-    margin-bottom: 32px;
-    border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.certificate {
     margin-top: 32px;
     margin-bottom: 32px;
     border-top: 1px solid rgba(255, 255, 255, 0.15);

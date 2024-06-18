@@ -62,10 +62,10 @@ a {
 
 @media (min-width: 100px) {
   h1 {
-    font-size: 44px;
+    font-size: 32px;
   }
   h2 {
-    font-size: 32px;
+    font-size: 24px;
   }
 }
 @media (min-width: 768px) {
@@ -107,6 +107,8 @@ a {
 body {
   background-color: #03141D;
   padding: 0;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 @media (min-width: 100px) {
@@ -148,6 +150,11 @@ body {
     margin-left: 96px;
     margin-right: 96px;
   }
+}
+.certificate {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
 }
 .certificate .card {
   display: flex;
@@ -226,6 +233,85 @@ body {
   margin: 0;
 }
 
+.what-can-i-do {
+  display: flex;
+  overflow-y: scroll;
+  padding: 0;
+  margin: 0;
+}
+.what-can-i-do .content {
+  width: 400px;
+  padding: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1450980392);
+}
+.what-can-i-do .content img {
+  width: 96px;
+}
+
+@media (max-width: 480px) {
+  .what-can-i-do {
+    display: flex;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+  }
+  .what-can-i-do .content {
+    width: 400px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1450980392);
+  }
+  .what-can-i-do .content img {
+    width: 64px;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  .what-can-i-do {
+    display: flex;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+  }
+  .what-can-i-do .content {
+    width: 400px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1450980392);
+  }
+  .what-can-i-do .content img {
+    width: 64px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .what-can-i-do {
+    display: flex;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+  }
+  .what-can-i-do .content {
+    width: 400px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1450980392);
+  }
+  .what-can-i-do .content img {
+    width: 44px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .what-can-i-do {
+    display: flex;
+    overflow-y: scroll;
+    padding: 0;
+    margin: 0;
+  }
+  .what-can-i-do .content {
+    width: 400px;
+    padding: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.1450980392);
+  }
+  .what-can-i-do .content img {
+    width: 44px;
+  }
+}
 .hero {
   margin-top: 64px;
   margin-bottom: 64px;
@@ -245,31 +331,45 @@ body {
 .hero .tag .tag-content p {
   margin: 0;
 }
-.hero a {
-  padding: 16px 32px;
+.hero .button {
+  padding: 24px 32px;
   background-color: #FFFFFF;
   color: black;
-  border-radius: 100px;
+  border-radius: 12px;
+}
+.hero .cta .left {
+  padding: 24px 32px;
+  background-color: #FFFFFF;
+  color: black;
+  border-radius: 12px;
+}
+.hero .cta .right {
+  padding: 24px 32px;
+  border: 1px solid rgba(255, 255, 255, 0.3137254902);
+  color: #FFFFFF;
+  border-radius: 12px;
 }
 
 .nav {
   width: 100%;
   position: fixed;
+  top: 0;
   left: 0;
   right: 0;
-  z-index: 3;
+  background-color: #03141D;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1450980392);
 }
 .nav .nav-container {
   display: flex;
   justify-content: center;
 }
 .nav .nav-container .nav-content {
-  border: 1px solid rgba(255, 255, 255, 0.15);
   width: fit-content;
   display: flex;
   justify-content: space-between;
   overflow: scroll;
-  background-color: #093A53;
   padding: 24px 32px;
   border-radius: 100px;
 }
@@ -286,54 +386,26 @@ body {
   color: #FFFFFF;
 }
 
-@media (min-width: 100px) {
-  .nav {
-    top: 32px;
-  }
-}
-@media (min-width: 768px) {
-  .nav {
-    top: 32px;
-  }
-}
-@media (min-width: 992px) {
-  .nav {
-    top: 32px;
-  }
-}
-@media (min-width: 1200px) {
-  .nav {
-    top: 32px;
-  }
-}
-@media (min-width: 1400px) {
-  .nav {
-    top: 32px;
-  }
-}
-.sticky {
-  position: sticky;
-  top: 128px;
-}
-
 .experience {
   margin-top: 32px;
   margin-bottom: 32px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 32px;
 }
-.experience img {
-  width: 100%;
-  border-radius: 16px;
-  margin-top: 32px;
+.experience .left {
+  width: 512px;
+}
+.experience .right {
+  width: 360px;
+}
+.experience .right img {
+  width: 360px;
 }
 
 .currently-work {
-  margin-top: 32px;
-  margin-bottom: 32px;
-  border-top: 1px solid rgba(255, 255, 255, 0.15);
-}
-
-.certificate {
   margin-top: 32px;
   margin-bottom: 32px;
   border-top: 1px solid rgba(255, 255, 255, 0.15);
